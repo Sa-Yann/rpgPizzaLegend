@@ -1,0 +1,30 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #333;
+    padding: 0;
+    margin: 0;
+    /* avoid the scrolling understanding in the browser when using keyboard arroas keys */
+    overflow: hidden;
+}
+
+.game_Container {
+    position: relative;
+    /* those height and width really fix the dimension of the canvas
+    while the height and with mention in the html are used as reference for effect like zooming */
+    width: 352px;
+    height: 198px;
+    outline: 1px solid #fff;
+    /*  center left right */
+    margin: 0 auto;
+    margin-top: 20px;
+
+    transform: scale(3) translateY(50%)
+}
+
+.game_Container canvas {
+    /* multipli the amount of pixel and take away the bluty effect caused by the transform: scale(e) */
+    image-rendering: pixelated;
+}
